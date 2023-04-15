@@ -14,8 +14,7 @@ document.querySelector('.save').addEventListener('click' , () => {
         let reason=document.querySelector(".reason").value
         let phone=document.querySelector(".phone").value
         let pn=document.querySelector(".pn").value
-        // console.log(code,paid,toatl,reason,phone,pn,doctor);
-        fetch("https://localhost:7299/AddPatient", {
+        fetch("http://Clinic.somee.com/AddPatient", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

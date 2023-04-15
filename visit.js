@@ -1,6 +1,6 @@
 async function getVisits() {
     const tbody=document.querySelector('tbody')
-    let res=await fetch(`https://localhost:7299/GetVisitsByPatient?id=${localStorage.getItem("id")}`) 
+    let res=await fetch(`http://Clinic.somee.com/GetVisitsByPatient?id=${localStorage.getItem("id")}`) 
     let data=await res.json()
     console.log(data);
     data.forEach(element => {

@@ -12,7 +12,7 @@ setTimeout(() => {
     const dels=document.querySelectorAll(".delete")
     dels.forEach(element => {
         element.addEventListener('click' , () => {
-          fetch(`https://localhost:7299/Delete?id=${element.getAttribute("data-id")}`).then((e)=>{
+          fetch(`http://Clinic.somee.com/Delete?id=${element.getAttribute("data-id")}`).then((e)=>{
             window.location.reload()
           })
         })
@@ -28,9 +28,8 @@ setTimeout(() => {
 }, 500);
 async function getpatient() {
     const tbody=document.querySelector('tbody')
-    const res=await fetch('https://localhost:7299/GetAll')
+    const res=await fetch('http://Clinic.somee.com/GetAll')
     const data= await res.json()
-    // console.log(data);
     data.forEach(element => {
 
         let tr=document.createElement('tr')
